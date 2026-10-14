@@ -12,4 +12,3 @@ Read [docs/HISTORY.md](docs/HISTORY.md) first and add a dated entry after each s
 - No third-party photos except in website screenshots whose sites credit them.
 - New work: add a numbered folder, a section in `index.html` and a row in `README.md`; keep images
   at most ~2000 px and include SVG originals where they exist.
-- Planned: 05 Hof theatre brochure and poster (files still to be found).

@@ -2,7 +2,7 @@
 
 **Gallery:** https://erhanerogluant.github.io/design-portfolio/
 
-Brand identities, watercolour and pen-and-ink illustrations, and restaurant website concepts.
+Brand identities, print (brochure, poster), watercolour and pen-and-ink illustrations, and restaurant website concepts.
 
 | # | Work | What | Files |
 |---|---|---|---|
@@ -10,6 +10,7 @@ Brand identities, watercolour and pen-and-ink illustrations, and restaurant webs
 | 02 | **KARAFAKİ** | Logo, wordmark, animated SVG watercolour of the canal façade, website — [live site](https://erhanerogluant.github.io/karafaki-concept/) | [02-karafaki](02-karafaki) |
 | 03 | **Ink sketches** | Pen-and-ink meyhane motifs drawn as SVG (drawn stroke by stroke on the website) | [03-ink-sketches](03-ink-sketches) |
 | 04 | **Maison AUREL** | Website concept for a fine-dining restaurant — [live site](https://erhanerogluant.github.io/maison-concept/) | [04-maison-aurel](04-maison-aurel) |
+| 05 | **Hoftheater Kreuzberg** | Bilingual season brochure (A5, 4 pages) and A3 poster | [05-hof-theatre](05-hof-theatre) |
 
 ![KARAFAKİ canal façade, SVG watercolour](02-karafaki/karafaki-canal-facade-watercolour.jpg)
 

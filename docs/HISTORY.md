@@ -13,6 +13,6 @@ Decisions and changes, newest first. Add a dated entry after each working sessio
   mosaicked and blurred; the company brochure is not included (photos of unclear origin).
 - Client work that has not been delivered yet is kept in the private repository
   `design-portfolio-private` until the client approves publication.
-- A Hof theatre brochure and poster are planned as section 05; the files were not found on this
-  computer yet.
+- 05 Hoftheater Kreuzberg: brochure and poster designed earlier on a Claude design canvas; the
+  artboards were converted to plain HTML and rendered with headless Chrome (original web fonts).
 - `index.html` is the gallery served by GitHub Pages; images open in a lightbox.
