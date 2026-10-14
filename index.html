@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Portfolio — Erhan Eroglu</title>
+<meta name="description" content="Brand identities, watercolour and ink illustrations, and restaurant website concepts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4f1ea;
+    --card: #fbfaf6;
+    --ink: #1c1d1d;
+    --muted: #63676a;
+    --line: #dcd7cc;
+    --accent: #1f4568;
+    --gap: clamp(14px, 2vw, 24px);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 300 17px/1.65 "Jost", system-ui, sans-serif;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+
+  header.top { padding: clamp(56px, 10vw, 120px) 0 clamp(36px, 6vw, 64px); border-bottom: 1px solid var(--line); }
+  .eyebrow { font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: var(--muted); }
+  h1 {
+    font: 400 clamp(44px, 8vw, 96px)/1 "Cormorant Garamond", serif;
+    margin: 18px 0 20px; letter-spacing: -.01em;
+  }
+  h1 em { color: var(--accent); }
+  .lead { max-width: 640px; color: var(--muted); font-size: 18px; margin: 0; }
+  nav.toc { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 34px; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+  nav.toc a { text-decoration: none; color: var(--ink); border-bottom: 1px solid var(--line); padding-bottom: 3px; }
+  nav.toc a:hover { border-color: var(--accent); color: var(--accent); }
+
+  section.work { padding: clamp(48px, 8vw, 96px) 0; border-bottom: 1px solid var(--line); }
+  .work-head { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px 40px; margin-bottom: 30px; }
+  @media (min-width: 860px) { .work-head { grid-template-columns: 220px minmax(0, 1fr); } }
+  .num { font: 400 15px "Jost", sans-serif; letter-spacing: .2em; color: var(--muted); padding-top: 12px; }
+  h2 { font: 400 clamp(32px, 4.6vw, 52px)/1.05 "Cormorant Garamond", serif; margin: 0 0 10px; }
+  .meta { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+  .work-head p { margin: 0; color: var(--muted); max-width: 680px; }
+  .links { margin-top: 14px; display: flex; gap: 20px; flex-wrap: wrap; font-size: 15px; }
+
+  .grid { display: grid; gap: var(--gap); grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  figure { margin: 0; background: var(--card); border: 1px solid var(--line); overflow: hidden; }
+  figure a { display: block; height: 100%; }
+  figure img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+  figure.contain img { object-fit: contain; padding: clamp(16px, 3vw, 40px); }
+  figure:hover img { transform: scale(1.02); }
+  figcaption { font-size: 13px; color: var(--muted); padding: 10px 14px; border-top: 1px solid var(--line); background: var(--card); }
+  .c12 { grid-column: span 12; } .c8 { grid-column: span 12; } .c6 { grid-column: span 12; }
+  .c4 { grid-column: span 6; } .c3 { grid-column: span 6; }
+  @media (min-width: 860px) {
+    .c8 { grid-column: span 8; } .c6 { grid-column: span 6; } .c4 { grid-column: span 4; } .c3 { grid-column: span 3; }
+  }
+  .tall { aspect-ratio: 4 / 5; } .wide { aspect-ratio: 16 / 10; } .square { aspect-ratio: 1; } .banner { aspect-ratio: 4 / 1; }
+  .phone { aspect-ratio: 9 / 19.5; }
+  .logo-row { height: clamp(150px, 22vw, 280px); }
+  .bg-white { background: #fff; } .bg-paper { background: #f3f2ed; } .bg-stone { background: #e9e7e2; } .bg-ivory { background: #f2ede3; }
+
+  footer { padding: 48px 0 64px; font-size: 14px; color: var(--muted); }
+
+  /* lightbox */
+  .lb { position: fixed; inset: 0; background: rgba(20,20,18,.92); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 10; cursor: zoom-out; }
+  .lb.open { display: flex; }
+  .lb img { max-width: 100%; max-height: 100%; background: var(--card); }
+  @media (prefers-reduced-motion: reduce) { figure img { transition: none; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Design portfolio</div>
+    <h1>Brands, drawings <em>&amp;</em> websites</h1>
+    <p class="lead">Logos and stationery, watercolour and pen-and-ink illustrations, and restaurant
+      website concepts designed and built end to end — from the mark to the live site.</p>
+    <nav class="toc">
+      <a href="#ant">01 ANT Engineering</a>
+      <a href="#karafaki">02 KARAFAKİ</a>
+      <a href="#sketches">03 Ink sketches</a>
+      <a href="#maison">04 Maison AUREL</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="work" id="ant">
+    <div class="wrap">
+      <div class="work-head">
+        <div class="num">01</div>
+        <div>
+          <h2>ANT Engineering</h2>
+          <p class="meta">Logo · corporate identity</p>
+          <p>Mark for an engineering and design office: the letter A as a pair of compasses, with the
+            arc in the accent yellow. Applied to letterhead, business card, envelope and label.
+            Contact details are blurred.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <figure class="c4 contain square bg-white"><a href="01-ant-engineering/ant-logo.png"><img src="01-ant-engineering/ant-logo.png" alt="ANT Engineering logo" loading="lazy"></a></figure>
+        <figure class="c8 wide"><a href="01-ant-engineering/ant-identity-set.jpg"><img src="01-ant-engineering/ant-identity-set.jpg" alt="ANT stationery: letterhead, business card, label and envelope" loading="lazy"></a></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="karafaki">
+    <div class="wrap">
+      <div class="work-head">
+        <div class="num">02</div>
+        <div>
+          <h2>KARAFAKİ</h2>
+          <p class="meta">Logo · watercolour illustration · website</p>
+          <p>Identity and website for a fictional meyhane on Berlin's Landwehrkanal. The mark is a
+            single-line carafe holding a star anise, with the wave where water turns rakı milky. The
+            canal façade is an animated watercolour drawn in SVG.</p>
+          <div class="links"><a href="https://erhanerogluant.github.io/karafaki-concept/">Live site →</a></div>
+        </div>
+      </div>
+      <div class="grid">
+        <figure class="c8 contain logo-row bg-stone"><a href="02-karafaki/karafaki-logo-wordmark.png"><img src="02-karafaki/karafaki-logo-wordmark.png" alt="KARAFAKİ wordmark" loading="lazy"></a></figure>
+        <figure class="c4 contain logo-row bg-paper"><a href="02-karafaki/karafaki-mark-large.png"><img src="02-karafaki/karafaki-mark-large.png" alt="KARAFAKİ carafe mark" loading="lazy"></a></figure>
+        <figure class="c12 wide"><a href="02-karafaki/karafaki-canal-facade-watercolour.jpg"><img src="02-karafaki/karafaki-canal-facade-watercolour.jpg" alt="Watercolour of the restaurant façade on the canal at dusk" loading="lazy"></a><figcaption>Canal façade — SVG watercolour (vector file included)</figcaption></figure>
+        <figure class="c8 wide"><a href="02-karafaki/karafaki-web-hero.jpg"><img src="02-karafaki/karafaki-web-hero.jpg" alt="KARAFAKİ website, desktop" loading="lazy"></a></figure>
+        <figure class="c4 phone"><a href="02-karafaki/karafaki-web-mobile.jpg"><img src="02-karafaki/karafaki-web-mobile.jpg" alt="KARAFAKİ website, mobile" loading="lazy"></a></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="sketches">
+    <div class="wrap">
+      <div class="work-head">
+        <div class="num">03</div>
+        <div>
+          <h2>Ink sketches</h2>
+          <p class="meta">Pen-and-ink illustration · SVG</p>
+          <p>Meyhane motifs drawn for the KARAFAKİ site: on the page each line is drawn stroke by
+            stroke as it scrolls into view. Every sketch is also available as a vector file.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <figure class="c4 contain tall bg-paper"><a href="03-ink-sketches/sketch-carafe-man.png"><img src="03-ink-sketches/sketch-carafe-man.png" alt="Ink sketch: man with a carafe for a head" loading="lazy"></a></figure>
+        <figure class="c8 contain wide bg-paper"><a href="03-ink-sketches/sketch-dreamer.png"><img src="03-ink-sketches/sketch-dreamer.png" alt="Ink sketch: dreamer with a boat in her hair" loading="lazy"></a></figure>
+        <figure class="c3 contain square bg-paper"><a href="03-ink-sketches/sketch-eye.png"><img src="03-ink-sketches/sketch-eye.png" alt="Ink sketch: eye" loading="lazy"></a></figure>
+        <figure class="c3 contain square bg-paper"><a href="03-ink-sketches/sketch-pomegranate.png"><img src="03-ink-sketches/sketch-pomegranate.png" alt="Ink sketch: pomegranate" loading="lazy"></a></figure>
+        <figure class="c3 contain square bg-paper"><a href="03-ink-sketches/sketch-sofra.png"><img src="03-ink-sketches/sketch-sofra.png" alt="Ink sketch: rakı table" loading="lazy"></a></figure>
+        <figure class="c3 contain square bg-paper"><a href="03-ink-sketches/sketch-anise.png"><img src="03-ink-sketches/sketch-anise.png" alt="Ink sketch: star anise" loading="lazy"></a></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="maison">
+    <div class="wrap">
+      <div class="work-head">
+        <div class="num">04</div>
+        <div>
+          <h2>Maison AUREL</h2>
+          <p class="meta">Website · art direction</p>
+          <p>Website concept for a fictional contemporary fine-dining restaurant in Berlin: editorial
+            serif typography, warm ivory and charcoal, generous photography. Three languages,
+            responsive, built with Next.js.</p>
+          <div class="links"><a href="https://erhanerogluant.github.io/maison-concept/">Live site →</a></div>
+        </div>
+      </div>
+      <div class="grid">
+        <figure class="c12 contain logo-row bg-ivory"><a href="04-maison-aurel/maison-logo-wordmark.png"><img src="04-maison-aurel/maison-logo-wordmark.png" alt="Maison AUREL wordmark" loading="lazy"></a></figure>
+        <figure class="c8 wide"><a href="04-maison-aurel/maison-web-hero.jpg"><img src="04-maison-aurel/maison-web-hero.jpg" alt="Maison AUREL website, desktop" loading="lazy"></a></figure>
+        <figure class="c4 phone"><a href="04-maison-aurel/maison-web-mobile.jpg"><img src="04-maison-aurel/maison-web-mobile.jpg" alt="Maison AUREL website, mobile" loading="lazy"></a></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    © Erhan Eroglu — all rights reserved. KARAFAKİ and Maison AUREL are design concepts for
+    fictional restaurants. Website photography: Unsplash, Wikimedia Commons and Pexels, credited on
+    each site.
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image preview"><img alt=""></div>
+<script>
+  // Open full images in a lightbox instead of leaving the page
+  const lb = document.getElementById("lb"), lbImg = lb.querySelector("img");
+  document.querySelectorAll("figure a").forEach((a) => a.addEventListener("click", (e) => {
+    e.preventDefault();
+    lbImg.src = a.getAttribute("href");
+    lbImg.alt = a.querySelector("img").alt;
+    lb.classList.add("open");
+  }));
+  lb.addEventListener("click", () => lb.classList.remove("open"));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") lb.classList.remove("open"); });
+</script>
+</body>
+</html>
